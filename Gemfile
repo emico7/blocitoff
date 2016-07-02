@@ -11,10 +11,17 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails'
+  gem 'shoulda'
+  gem 'faker'
+  gem 'factory_girl_rails'
+  gem 'simplecov'
+  gem 'pry-rails'
 end
 
 # Use SCSS for stylesheets
