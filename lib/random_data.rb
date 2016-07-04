@@ -1,3 +1,4 @@
+=begin
 module RandomData
 
   def self.random_email
@@ -28,3 +29,4 @@ module RandomData
     letters[0,rand(4..8)].join
   end
 end
+=end

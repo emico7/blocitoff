@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe ItemsController, type: :controller do
 
-  let(:my_user) { create(:user) }
-  let(:my_item) { create(:item) }
+  let(:my_user) { User.create!(username: "user1", email: "user1@blocitoff.com", password: "password", password_confirmation: "password") }
+  let(:my_item) { my_user.items.create!(name: "item1") }
+  let(:my_item2) { my_user.items.create!(name: "item2") }
 
   describe "POST create" do
 
@@ -12,9 +13,9 @@ RSpec.describe ItemsController, type: :controller do
     end
 
     it "increases the sum of user items by 1" do
-      count = user_item.count
-      post :create, item_id: user_item.id
-      expect(user_item.count).to eq(count + 1)
+      count = my_user.items.count
+      post :create, user_id: my_user.id, item_id: my_item2.id
+      expect(my_user.items.count).to eq(count + 1)
     end
 
   end

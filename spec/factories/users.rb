@@ -1,3 +1,4 @@
+=begin
 FactoryGirl.define do
 
   pw = RandomData.random_sentence
@@ -10,3 +11,4 @@ FactoryGirl.define do
     password_confirmation pw
   end
 end
+=end

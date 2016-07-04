@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
-  let(:user) { create(:user) }
-  let(:item) { create(:item) }
+  let(:user) { User.create!(username: "user1", email: "user1@blocitoff.com", password: "password", password_confirmation: "password") }
+  let(:item) { user.items.create!(name: "item1") }
 
   it { is_expected.to belong_to(:user) }
 
@@ -12,4 +12,3 @@ RSpec.describe Item, type: :model do
     end
   end
 end
- 
