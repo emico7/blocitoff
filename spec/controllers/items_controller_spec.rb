@@ -17,6 +17,5 @@ RSpec.describe ItemsController, type: :controller do
       post :create, user_id: my_user.id, item_id: my_item2.id
       expect(my_user.items.count).to eq(count + 1)
     end
-
   end
 end
