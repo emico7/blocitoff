@@ -21,11 +21,9 @@
           </thead>
 
           <tbody>
-            <% @user.items.each do |item| %>
               <tr>
-                <td><%= item.name %>
+                <td class='js-items'><%= render @user.items %></td>
               </tr>
-           <% end %>
           </tbody>
         </table>
       </div>
