@@ -42,4 +42,6 @@ gem 'devise'
 
 gem 'bootstrap-sass'
 
+gem 'bootswatch-rails'
+
 gem 'figaro', '1.0'
