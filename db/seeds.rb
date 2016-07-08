@@ -13,7 +13,8 @@ users = User.all
 50.times do
   item = Item.create!(
     user: users.sample,
-    name: Faker::Hipster.sentence(3)
+    name: Faker::Hipster.sentence(3),
+    time_remaining: 7
  )
 end
 items = Item.all
