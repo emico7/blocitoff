@@ -9,7 +9,7 @@ RSpec.describe Item, type: :model do
   describe "attributes" do
     it "has name and user attributes" do
       expect(item).to have_attributes(name: item.name)
-      #expect(item).to have_attributes(complete: false)
+      expect(item).to have_attributes(time_remaining: item.time_remaining)
     end
   end
 end

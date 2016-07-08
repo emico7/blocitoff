@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :item do
     name Faker::Hipster.sentence(3)
-    #complete false
+    time_remaining 7
     user
   end
 end
