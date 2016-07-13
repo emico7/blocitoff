@@ -4,7 +4,7 @@
   <div class="form-group">
     <%= f.label :name, class: 'sr-only' %>
     <%= f.text_field :name, class: 'form-control', placeholder: "Enter a new item", value: nil, required: true %>
-    <%= f.text_field :time_remaining, class: 'form-control', id: 'daysleft', placeholder: "7", value: nil, required: true %>
+    <%= f.number_field :time_remaining, class: 'form-control', id: 'daysleft', placeholder: "7", value: nil, required: true %>
   </div>
   <%= f.submit "Create Item", class: 'btn btn-default pull-right' %>
 <% end %>
