@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
       redirect_to [@user]
     else
       flash.now[:alert] = "There was an error saving the item. Please try again."
+      redirect_to [@user]
     end
 
   end
